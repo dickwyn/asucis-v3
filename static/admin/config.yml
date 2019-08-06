@@ -1,0 +1,23 @@
+backend:
+  name: git-gateway
+media_folder: static/assets
+public_folder: assets
+collections:
+  - name: "site-information"
+    label: "Site Information"
+    folder: "src/data"
+    create: false
+    fields:
+      - { label: "Name", name: "name" }
+      - { label: "Logo", name: "logo", widget: "image" }
+      - { label: "Tagline", name: "tagline" }
+      - { label: "Description", name: "description" }
+  - name: "events"
+    label: "Events"
+    folder: "src/data/events"
+    create: true
+    fields:
+      - { label: "Name", name: "title" }
+      - { label: "Date", name: "date" }
+      - { label: "Photo", name: "photo", widget: "image" }
+      - { label: "Description", name: "description" }
