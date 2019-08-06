@@ -15,7 +15,7 @@ This project is built with:
 **Development Mode**
 
 ```sh
-$ git clone https://github.com/dickwyn/blog.git
+$ git clone https://github.com/asucis/v3.git
 $ cd blog
 $ yarn
 $ gatsby develop
