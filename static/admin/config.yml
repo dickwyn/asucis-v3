@@ -12,9 +12,9 @@ collections:
       - { label: "Name", name: "name" }
       - { label: "Tagline", name: "tagline" }
       - { label: "Description", name: "description" }
-  - name: "events"
-    label: "Events"
-    folder: "src/data/events"
+  - name: "event"
+    label: "Event"
+    folder: "src/data/event"
     create: true
     fields:
       - { label: "Featured Photo", name: "photo", widget: "image" }
@@ -33,9 +33,9 @@ collections:
       - { label: "Email", name: "email" }
       - { label: "Description", name: "description" }
       - { label: "Link", name: "link" }
-  - name: "partner-organizations"
-    label: "Partner Organizations"
-    folder: "src/data/partner-organizations"
+  - name: "partner-organization"
+    label: "Partner Organization"
+    folder: "src/data/partner-organization"
     create: true
     fields:
       - { label: "Photo", name: "photo", widget: "image" }
