@@ -19,5 +19,17 @@ collections:
     fields:
       - { label: "Name", name: "title" }
       - { label: "Date", name: "date" }
-      - { label: "Photo", name: "photo", widget: "image" }
+      - { label: "Featured Photo", name: "photo", widget: "image" }
       - { label: "Description", name: "description" }
+      - { label: "Link", name: "link" }
+  - name: "team"
+    label: "Team"
+    folder: "src/data/team"
+    create: true
+    fields:
+      - { label: "Name", name: "title" }
+      - { label: "Role", name: "role" }
+      - { label: "Photo", name: "photo", widget: "image" }
+      - { label: "Email", name: "email" }
+      - { label: "Description", name: "description" }
+      - { label: "Link", name: "link" }
