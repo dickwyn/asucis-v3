@@ -5,13 +5,21 @@ public_folder: assets
 collections:
   - name: "site-information"
     label: "Site Information"
-    folder: "src/data"
-    create: false
-    fields:
-      - { label: "Logo", name: "logo", widget: "image" }
-      - { label: "Name", name: "name" }
-      - { label: "Tagline", name: "tagline" }
-      - { label: "Description", name: "description" }
+    files:
+      - file: "src/data/site-information.md"
+        name: "general"
+        label: "General"
+        fields:
+          - { label: "Logo", name: "logo", widget: "image" }
+          - { label: "Name", name: "name" }
+          - { label: "Tagline", name: "tagline" }
+          - { label: "Description", name: "description" }
+      - file: "src/data/social-media-links.md"
+        name: "social"
+        label: "Social Media Links"
+        fields:
+          - { label: "Name", name: "name" }
+          - { label: "Link", name: "link" }
   - name: "event"
     label: "Event"
     folder: "src/data/event"
