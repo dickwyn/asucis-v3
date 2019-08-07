@@ -8,8 +8,8 @@ collections:
     folder: "src/data"
     create: false
     fields:
-      - { label: "Name", name: "name" }
       - { label: "Logo", name: "logo", widget: "image" }
+      - { label: "Name", name: "name" }
       - { label: "Tagline", name: "tagline" }
       - { label: "Description", name: "description" }
   - name: "events"
@@ -17,9 +17,9 @@ collections:
     folder: "src/data/events"
     create: true
     fields:
+      - { label: "Featured Photo", name: "photo", widget: "image" }
       - { label: "Name", name: "title" }
       - { label: "Date", name: "date" }
-      - { label: "Featured Photo", name: "photo", widget: "image" }
       - { label: "Description", name: "description" }
       - { label: "Link", name: "link" }
   - name: "team"
@@ -27,9 +27,19 @@ collections:
     folder: "src/data/team"
     create: true
     fields:
+      - { label: "Photo", name: "photo", widget: "image" }
       - { label: "Name", name: "title" }
       - { label: "Role", name: "role" }
+      - { label: "Email", name: "email" }
+      - { label: "Description", name: "description" }
+      - { label: "Link", name: "link" }
+  - name: "partner-organizations"
+    label: "Partner Organizations"
+    folder: "src/data/partner-organizations"
+    create: true
+    fields:
       - { label: "Photo", name: "photo", widget: "image" }
+      - { label: "Name", name: "title" }
       - { label: "Email", name: "email" }
       - { label: "Description", name: "description" }
       - { label: "Link", name: "link" }
