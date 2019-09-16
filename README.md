@@ -1,35 +1,28 @@
-# v3
+![asucis logo](https://raw.githubusercontent.com/asucis/v3/.github/master/asucis-logo.png)
 
-V3
+# asucis-v3
 
-## Project Dependencies
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a63a017d-3a06-4fe1-9e26-72fef99b99cb/deploy-status)](https://app.netlify.com/sites/frosty-pasteur-f76607/deploys)
 
-This project is built with:
+Official website for Coalition of International Students at Arizona State University.
 
-1. [NodeJS](http://nodejs.org)
-2. [Gatsby](https://www.gatsbyjs.org/)
-3. [Netlify CMS](https://www.netlifycms.org/)
+Demo available at https://test.asucis.com. Documentation at https://github.com/asucis/v3/docs.
 
-## Running the Project
+## Development
 
-**Development Mode**
+ℹ️ yarn, gatsby-cli is required to run the project
 
 ```sh
 $ git clone https://github.com/asucis/v3.git
-$ cd blog
+$ cd v3
 $ yarn
 $ gatsby develop
 ```
 
-Starts the site at `http://localhost:8000`!
+Site is visible at `http://localhost:8000`!
 
-**Production Mode**
+## License
 
-```
-$ gatsby serve
-```
+The contents of this repository are covered under the [MIT License](https://raw.githubusercontent.com/asucis/v3/master/LICENSE).
 
-## Inspiration
-
-1. [Gastby Netlify CMS Starter](https://github.com/netlify-templates/gatsby-starter-netlify-cms)
-2. [Gatsby Hello World](https://github.com/gatsbyjs/gatsby-starter-hello-world)
+Copyright (c) Dick Wyn Yong and the contributors. All rights reserved.
