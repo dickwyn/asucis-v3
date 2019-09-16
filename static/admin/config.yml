@@ -2,11 +2,10 @@ backend:
   name: git-gateway
 media_folder: static/assets
 public_folder: assets
-collections:
   - name: "site-information"
     label: "Site Information"
     files:
-      - file: "src/data/site-information.md"
+      - file: "data/site-information.md"
         name: "general"
         label: "General"
         fields:
@@ -14,7 +13,7 @@ collections:
           - { label: "Name", name: "name" }
           - { label: "Tagline", name: "tagline" }
           - { label: "Description", name: "description" }
-      - file: "src/data/social-media-links.md"
+      - file: "data/social-media-links.md"
         name: "social"
         label: "Social Media Links"
         fields:
@@ -22,7 +21,7 @@ collections:
           - { label: "Link", name: "link" }
   - name: "event"
     label: "Event"
-    folder: "src/data/event"
+    folder: "data/event"
     create: true
     fields:
       - { label: "Featured Photo", name: "photo", widget: "image" }
@@ -32,7 +31,7 @@ collections:
       - { label: "Link", name: "link" }
   - name: "team"
     label: "Team"
-    folder: "src/data/team"
+    folder: "data/team"
     create: true
     fields:
       - { label: "Photo", name: "photo", widget: "image" }
@@ -43,7 +42,7 @@ collections:
       - { label: "Link", name: "link" }
   - name: "partner-organization"
     label: "Partner Organization"
-    folder: "src/data/partner-organization"
+    folder: "data/partner-organization"
     create: true
     fields:
       - { label: "Photo", name: "photo", widget: "image" }
