@@ -1,4 +1,4 @@
-![asucis logo](https://raw.githubusercontent.com/asucis/v3/.github/master/asucis-logo.png)
+![asucis logo](https://raw.githubusercontent.com/asucis/v3/master/.github/asucis-logo.png)
 
 # asucis-v3
 
