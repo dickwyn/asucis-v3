@@ -5,6 +5,7 @@ module.exports = {
     author: `@dickwyn`,
   },
   plugins: [
+    `gatsby-plugin-eslint`,
     `gatsby-plugin-netlify-cms`,
     {
       resolve: `gatsby-plugin-google-analytics`,
@@ -44,4 +45,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};
