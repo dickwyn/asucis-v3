@@ -20,7 +20,7 @@ _conventions adapted from [karma](http://karma-runner.github.io/0.10/dev/git-com
 
 Include the issue # in your pull request (PR) title alongisde a clear and concise summary of the changes made. Include additional information in the PR description.
 
-Exmple PR title
+Example PR title
 
 ```
 feat(#9): Integrated events API with events page
