@@ -47,7 +47,7 @@
     "start": "yarn run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://www.gatsbyjs.org/docs/unit-testing/\"",
-    "lint": "eslint \"**/*.js\" "
+    "lint": "eslint src/**/*.js"
   },
   "repository": {
     "type": "git",
