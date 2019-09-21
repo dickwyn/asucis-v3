@@ -2,7 +2,8 @@ backend:
   name: git-gateway
 media_folder: static/assets
 public_folder: assets
-  - name: "site-information"
+collections:
+  - name: site-information
     label: "Site Information"
     files:
       - file: "data/site-information.md"
