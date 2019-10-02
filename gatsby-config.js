@@ -13,6 +13,14 @@ module.exports = {
         trackingId: `${process.env.GA_TRACKING_ID}`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/data`,
+        ignore: [`**/\.*`], // ignore files starting with a dot
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -21,6 +29,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
