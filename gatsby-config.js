@@ -26,29 +26,22 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/images`,
       },
     },
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
-    {
-      resolve: `gatsby-plugin-sharp`,
-      options: {
-        useMozJpeg: false,
-        stripMetadata: true,
-        defaultQuality: 75,
-      },
-    },
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `ASU Coalition of International Students`,
         short_name: `ASUCIS`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/asucis-icon.png`,
+        background_color: `#FFF`,
+        theme_color: `#000`,
+        display: `standalone`,
+        icon: `images/asucis-icon.png`,
       },
     },
     {
