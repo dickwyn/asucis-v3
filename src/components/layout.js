@@ -1,9 +1,9 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-import Header from "./Header"
-import Footer from "./Footer"
-import "../scss/App.scss"
+import React from "react";
+import PropTypes from "prop-types";
+import { useStaticQuery, graphql } from "gatsby";
+import Header from "./Header";
+import Footer from "./Footer";
+import "../scss/App.scss";
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <div className="layout">
@@ -22,11 +22,11 @@ const Layout = ({ children }) => {
       <main>{children}</main>
       <Footer />
     </div>
-  )
-}
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;

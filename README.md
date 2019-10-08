@@ -21,6 +21,32 @@ $ gatsby develop
 
 Site is visible at `http://localhost:8000`!
 
+## Available scripts
+
+To start the development server
+
+```sh
+$ gatsby develop
+```
+
+OR
+
+```sh
+$ yarn start
+```
+
+To lint files
+
+```sh
+$ yarn lint
+```
+
+To create production build
+
+```sh
+$ gatsby serve
+```
+
 ## License
 
 The contents of this repository are covered under the [MIT License](https://raw.githubusercontent.com/asucis/v3/master/LICENSE).

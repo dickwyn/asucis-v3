@@ -1,21 +1,22 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "asucis-v3",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "v3",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Dick Wyn Yong <dickwyn@outlook.com>",
   "dependencies": {
     "gatsby": "^2.13.44",
     "gatsby-image": "^2.2.7",
     "gatsby-plugin-google-analytics": "^2.1.16",
-    "gatsby-plugin-manifest": "^2.2.4",
+    "gatsby-plugin-manifest": "^2.2.20",
     "gatsby-plugin-netlify-cms": "^4.1.6",
     "gatsby-plugin-offline": "^2.2.4",
     "gatsby-plugin-react-helmet": "^3.1.2",
     "gatsby-plugin-sass": "^2.1.4",
-    "gatsby-plugin-sharp": "^2.2.9",
+    "gatsby-plugin-sharp": "^2.2.28",
     "gatsby-source-filesystem": "^2.1.6",
-    "gatsby-transformer-sharp": "^2.2.5",
+    "gatsby-transformer-remark": "^2.6.26",
+    "gatsby-transformer-sharp": "^2.2.20",
     "netlify-cms-app": "^2.9.7",
     "node-sass": "^4.12.0",
     "prop-types": "^15.7.2",
@@ -24,6 +25,16 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+    "eslint": "^6.4.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-loader": "^3.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "gatsby-plugin-eslint": "^2.0.5",
+    "husky": "^3.0.5",
     "prettier": "^1.18.2"
   },
   "keywords": [
@@ -34,9 +45,10 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "npm run develop",
+    "start": "yarn run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "echo \"Write tests! -> https://www.gatsbyjs.org/docs/unit-testing/\"",
+    "lint": "eslint src/**/*.js"
   },
   "repository": {
     "type": "git",
@@ -44,5 +56,11 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn test && yarn lint",
+      "pre-push": "yarn test && yarn lint"
+    }
   }
 }
