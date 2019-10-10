@@ -1,4 +1,5 @@
 import { graphql, useStaticQuery } from "gatsby";
+import uuid from "uuid";
 
 const getEventData = () => {
   const events = useStaticQuery(graphql`
@@ -19,8 +20,20 @@ const getEventData = () => {
     }
   `);
 
+  const arrEvents = [];
+
+  events.allMarkdownRemark.edges.forEach(edge => {
+    arrEvents.push({
+      id: uuid.v4(),
+      title: edge.node.frontmatter.title,
+      description: edge.node.frontmatter.description,
+      photo: edge.node.frontmatter.photo,
+      date: edge.node.frontmatter.date,
+    });
+  });
+
   if (!events) return null;
-  return events;
+  return arrEvents;
 };
 
 export default getEventData;
