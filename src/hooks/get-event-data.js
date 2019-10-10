@@ -3,23 +3,18 @@ import { graphql, useStaticQuery } from "gatsby";
 const getEventData = () => {
   const events = useStaticQuery(graphql`
     query eventData {
-      allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/partner-organization/" } }
-      ) {
+      allMarkdownRemark(filter: {fileAbsolutePath: {regex: "\\/event/"}}) {
         edges {
           node {
-            id
             frontmatter {
-              title
-              email
-              photo
-              link
+              date
               description
+              photo
+              title
             }
           }
         }
       }
-
     }
   `);
 
