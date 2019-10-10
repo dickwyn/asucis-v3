@@ -6,6 +6,7 @@ const getEventData = () => {
       allMarkdownRemark(filter: {fileAbsolutePath: {regex: "\\/event/"}}) {
         edges {
           node {
+            id
             frontmatter {
               date
               description
