@@ -12,12 +12,12 @@ const eventData = () => {
       <SEO title="Events" />
       <h1>Events</h1>
       <p>Data</p>
-      {data.allMarkdownRemark.edges.map(post => (
-        <div key={post.node.id}>
-          <p>{post.node.frontmatter.title}</p>
-          <p>{post.node.frontmatter.date}</p>
-          <p>{post.node.frontmatter.photo}</p>
-          <p>{post.node.frontmatter.description}</p>
+      {data.map(event => (
+        <div key={event.id}>
+          <p>{event.title}</p>
+          <p>{event.photo}</p>
+          <p>{event.description}</p>
+          <p>{event.date}</p>
         </div>
       ))}
       <Link to="/">Go back to the homepage</Link>
