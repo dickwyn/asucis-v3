@@ -4,7 +4,7 @@ import uuid from "uuid";
 const getEventData = () => {
   const events = useStaticQuery(graphql`
     query eventData {
-      allMarkdownRemark(filter: {fileAbsolutePath: {regex: "\\/event/"}}) {
+      allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/event/" } }) {
         edges {
           node {
             id
