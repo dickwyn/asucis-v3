@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import getExecutiveMembers from "../hooks/get-exec-members";
+import getExecutiveMembers from "../hooks/get-executive-member";
 
 const MemberPage = () => {
   const data = getExecutiveMembers();
