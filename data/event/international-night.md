@@ -1,6 +1,6 @@
 ---
 title: International Night
-date: 'November 17, 2019'
+date: "November 17, 2019"
 photo: /assets/logo.png
 description: >-
   International Night is the biggest Our annual celebration for the success of
@@ -9,4 +9,3 @@ description: >-
   also serves as a platform to introduce the new executive board for the
   forthcoming academic year.
 ---
-

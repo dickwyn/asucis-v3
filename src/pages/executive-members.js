@@ -10,14 +10,14 @@ const MemberPage = () => {
     <Layout>
       <SEO title="Executive Members" />
       <h1>Executive Members</h1>
-      {data.allMarkdownRemark.edges.map(post => (
-        <div key={post.node.id}>
-          <p>{post.node.frontmatter.title}</p>
-          <p>{post.node.frontmatter.role}</p>
-          <p>{post.node.frontmatter.photo}</p>
-          <p>{post.node.frontmatter.link}</p>
-          <p>{post.node.frontmatter.email}</p>
-          <p>{post.node.frontmatter.description}</p>
+      {data.map(member => (
+        <div key={member.id}>
+          <p>{member.title}</p>
+          <p>{member.role}</p>
+          <p>{member.photo}</p>
+          <p>{member.link}</p>
+          <p>{member.email}</p>
+          <p>{member.description}</p>
         </div>
       ))}
       <Link to="/">Go to homepage</Link>
