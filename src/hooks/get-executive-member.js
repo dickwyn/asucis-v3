@@ -4,13 +4,7 @@ import uuid from "uuid";
 const getExecutiveMembers = () => {
   const execs = useStaticQuery(graphql`
     query teamQuery {
-      allMarkdownRemark(
-        filter: {
-          frontmatter: {
-            role: { in: ["President", "Treasurer", "Vice President"] }
-          }
-        }
-      ) {
+      allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/team/" } }) {
         edges {
           node {
             frontmatter {
