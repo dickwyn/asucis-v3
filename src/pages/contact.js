@@ -9,9 +9,9 @@ class Contacts extends Component {
     typeformEmbed.makeWidget(elm, "https://asucis.typeform.com/to/MtcZjL", {
       hideScrollbars: true,
       hideFooter: true,
-      onSubmit() {
-        console.log("Typeform successfully submitted");
-      },
+      // onSubmit() {
+      //   console.log("Typeform successfully submitted");
+      // },
     });
   }
 
@@ -19,13 +19,14 @@ class Contacts extends Component {
     return (
       <Layout>
         <SEO title="Contact" />
-        <div
-          className="ReactTypeformEmbed"
-          style={{ height: "100%" }}
-          ref={tf => {
-            this.typeformElm = tf;
-          }}
-        />
+        <div className="contact-container">
+          <div
+            className="typeform"
+            ref={tf => {
+              this.typeformElm = tf;
+            }}
+          />
+        </div>
       </Layout>
     );
   }

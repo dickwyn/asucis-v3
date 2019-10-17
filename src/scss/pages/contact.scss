@@ -1,0 +1,22 @@
+.contact-container {
+  display: grid;
+
+  grid-template-columns: 200px 1fr 200px;
+  height: 100%;
+}
+
+.typeform {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    margin: 0 0.5em;
+  }
+
+  .typeform {
+    grid-column: span 1;
+  }
+}
