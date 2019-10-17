@@ -3,7 +3,7 @@ import * as typeformEmbed from "@typeform/embed";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-class Contacts extends Component {
+class Contact extends Component {
   componentDidMount() {
     const elm = this.typeformElm;
     typeformEmbed.makeWidget(elm, "https://asucis.typeform.com/to/MtcZjL", {
@@ -32,4 +32,4 @@ class Contacts extends Component {
   }
 }
 
-export default Contacts;
+export default Contact;
