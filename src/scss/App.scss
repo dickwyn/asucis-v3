@@ -2,6 +2,7 @@
 @import "./components/Layout";
 @import "./components/Header";
 @import "./components/Footer";
+@import "./pages/contact";
 
 html,
 body {
@@ -23,4 +24,8 @@ body {
 #___gatsby,
 #gatsby-focus-wrapper {
   height: 100%;
+}
+
+a {
+  display: block;
 }

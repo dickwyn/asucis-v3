@@ -17,20 +17,16 @@ const IndexPage = () => {
         <Image />
       </div>
       {socialMediaAccounts.map(account => (
-        <a
-          href={account.link}
-          style={{ display: "block" }}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href={account.link} target="_blank" rel="noopener noreferrer">
           {account.name}
         </a>
       ))}
-      <br />
+
       <Link to="/page-2/">Go to page 2</Link>
       <Link to="/executive-members">Go to Executive Members</Link>
       <Link to="/partnerorg/">Go to Partner Organizations</Link>
       <Link to="/event-data">Go to Events</Link>
+      <Link to="/contact">Contact us!</Link>
     </Layout>
   );
 };

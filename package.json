@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Dick Wyn Yong <dickwyn@outlook.com>",
   "dependencies": {
+    "@typeform/embed": "^0.14.1",
     "gatsby": "^2.13.44",
     "gatsby-image": "^2.2.7",
     "gatsby-plugin-google-analytics": "^2.1.16",
