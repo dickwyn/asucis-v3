@@ -7,6 +7,7 @@
   "dependencies": {
     "@typeform/embed": "^0.14.1",
     "gatsby": "^2.13.44",
+    "gatsby-background-image": "^0.8.15",
     "gatsby-image": "^2.2.7",
     "gatsby-plugin-google-analytics": "^2.1.16",
     "gatsby-plugin-manifest": "^2.2.20",
@@ -37,7 +38,8 @@
     "eslint-plugin-react": "^7.14.3",
     "gatsby-plugin-eslint": "^2.0.5",
     "husky": "^3.0.5",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "resolve-url-loader": "^3.1.0"
   },
   "keywords": [
     "gatsby"

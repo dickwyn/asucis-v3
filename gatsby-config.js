@@ -12,6 +12,7 @@ module.exports = {
       resolve: `gatsby-plugin-sass`,
       options: {
         includePaths: ["src/scss/App.scss"],
+        useResolveUrlLoader: true,
       },
     },
     {
@@ -29,6 +30,7 @@ module.exports = {
         path: `${__dirname}/images`,
       },
     },
+    `gatsby-background-image`,
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
