@@ -2,6 +2,7 @@
 @import "./components/Layout";
 @import "./components/Header";
 @import "./components/Footer";
+@import "./components/HeroImage";
 @import "./pages/contact";
 
 html,
@@ -27,5 +28,23 @@ body {
 }
 
 a {
-  display: block;
+  /* unvisited link */
+  &:link {
+    color: $black;
+  }
+
+  /* visited link */
+  &:visited {
+    color: $dark-primary;
+  }
+
+  /* mouse over link */
+  &:hover {
+    color: $accent;
+  }
+
+  /* selected link */
+  &:active {
+    color: $accent;
+  }
 }
