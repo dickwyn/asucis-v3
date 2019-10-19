@@ -11,7 +11,6 @@ const Header = ({ siteTitle }) => (
           <Image alt={siteTitle} />
         </Link>
       </div>
-
       <div className="navigation">
         <div className="ticker">lorem ipsum dol somer text</div>
         <div className="links">
