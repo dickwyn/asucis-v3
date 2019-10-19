@@ -7,15 +7,21 @@ const Header = ({ siteTitle }) => (
   <header>
     <div className="container">
       <div className="logo">
-        <Image alt={siteTitle} />
+        <Link to="/">
+          <Image alt={siteTitle} />
+        </Link>
       </div>
+
       <div className="navigation">
-        <Link to="/">Home</Link>
-        <Link to="/">About Us</Link>
-        <Link to="/">Our Team</Link>
-        <Link to="/">Events</Link>
-        <Link to="/">Our Partners</Link>
-        <Link to="/">Contact</Link>
+        <div className="ticker">lorem ipsum dol somer text</div>
+        <div className="links">
+          <Link to="/">Home</Link>
+          <Link to="/page-2">About Us</Link>
+          <Link to="/executive-members">Our Team</Link>
+          <Link to="/event-data">Events</Link>
+          <Link to="/partnerorg">Our Partners</Link>
+          <Link to="/contact">Contact</Link>
+        </div>
       </div>
     </div>
   </header>
