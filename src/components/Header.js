@@ -28,7 +28,7 @@ class Header extends Component {
 
   updateWindowDimensions = () => {
     this.setState(prevState => ({
-      hamburger: window.innerWidth <= 968 ? prevState.hamburger : true,
+      hamburger: window.innerWidth < 968 ? prevState.hamburger : true,
       width: window.innerWidth,
     }));
   };
@@ -43,7 +43,7 @@ class Header extends Component {
     const { hamburger, width } = this.state;
     const { siteTitle } = this.props;
     const arrLinks = [
-      { id: uuid.v4(), name: "link", url: "/" },
+      { id: uuid.v4(), name: "Home", url: "/" },
       { id: uuid.v4(), name: "About Us", url: "/page-2" },
       { id: uuid.v4(), name: "Our Team", url: "/executive-members" },
       { id: uuid.v4(), name: "Events", url: "/event-data" },
@@ -63,14 +63,20 @@ class Header extends Component {
                 <p>asucis.com</p>
               </div>
               <div className="hamburger">
-                <button type="button" onClick={this.handleHamburger}>
+                <button
+                  type="button"
+                  className="hamburger-button"
+                  onClick={this.handleHamburger}
+                >
                   <FontAwesomeIcon icon={faBars} color="#fff" />
                 </button>
               </div>
             </div>
             <div
               className="navigation"
-              style={{ display: !hamburger || width >= 968 ? "block" : "none" }}
+              style={{
+                visibility: !hamburger || width > 968 ? "visible" : "hidden",
+              }}
             >
               <div className="ticker">lorem ipsum dol somer text</div>
               <div className="links">

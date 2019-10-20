@@ -8,6 +8,8 @@
 .typeform {
   grid-column-start: 2;
   grid-column-end: 3;
+  height: 500px;
+  z-index: 9999999999999;
 }
 
 @media (max-width: 768px) {
