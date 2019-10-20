@@ -2,6 +2,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
+import uuid from "uuid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import Image from "./image";
@@ -41,6 +42,14 @@ class Header extends Component {
   render() {
     const { hamburger, width } = this.state;
     const { siteTitle } = this.props;
+    const arrLinks = [
+      { id: uuid.v4(), name: "link", url: "/" },
+      { id: uuid.v4(), name: "About Us", url: "/page-2" },
+      { id: uuid.v4(), name: "Our Team", url: "/executive-members" },
+      { id: uuid.v4(), name: "Events", url: "/event-data" },
+      { id: uuid.v4(), name: "Our Partners", url: "/partnerorg" },
+      { id: uuid.v4(), name: "Contact", url: "/contact" },
+    ];
 
     return (
       <>
@@ -65,12 +74,11 @@ class Header extends Component {
             >
               <div className="ticker">lorem ipsum dol somer text</div>
               <div className="links">
-                <Link to="/">Home</Link>
-                <Link to="/page-2">About Us</Link>
-                <Link to="/executive-members">Our Team</Link>
-                <Link to="/event-data">Events</Link>
-                <Link to="/partnerorg">Our Partners</Link>
-                <Link to="/contact">Contact</Link>
+                {arrLinks.map(link => (
+                  <Link key={link.id} to={link.url}>
+                    {link.name}
+                  </Link>
+                ))}
               </div>
             </div>
           </div>
