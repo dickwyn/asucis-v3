@@ -8,10 +8,16 @@ const Header = ({ siteTitle }) => (
   <>
     <nav>
       <div className="navbar-container">
-        <div className="logo">
-          <Link to="/">
+        <div className="aside-navigation">
+          <div className="logo">
+            <Link to="/">
+              <Image alt={siteTitle} />
+            </Link>
+            <p>asucis.com</p>
+          </div>
+          <div className="hamburger">
             <Image alt={siteTitle} />
-          </Link>
+          </div>
         </div>
         <div className="navigation">
           <div className="ticker">lorem ipsum dol somer text</div>
@@ -35,7 +41,7 @@ Header.propTypes = {
 };
 
 Header.defaultProps = {
-  siteTitle: ``,
+  siteTitle: `ASU Coalition of International Students`,
 };
 
 export default Header;

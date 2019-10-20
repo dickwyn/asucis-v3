@@ -17,7 +17,7 @@ nav {
     grid-template-areas: "logo navigation";
     grid-column-gap: 1rem;
 
-    .logo {
+    .aside-navigation {
       grid-area: logo;
       background-color: $dark-primary;
       border-radius: 75%;
@@ -26,6 +26,19 @@ nav {
 
       .gatsby-image-wrapper {
         margin: 0.1rem;
+      }
+
+      .logo {
+        grid-area: logo;
+      }
+
+      .hamburger {
+        grid-area: hamburger;
+      }
+
+      p,
+      .hamburger {
+        display: none;
       }
     }
 
@@ -61,7 +74,49 @@ nav {
     }
 
     @media (max-width: 968px) {
-      background-color: blue;
+      background-color: red;
+      grid-template-columns: 1fr;
+      grid-template-areas: "logo" "navigation";
+
+      .aside-navigation {
+        margin: 0;
+        height: 66px;
+        background-color: $dark-primary;
+        border-radius: 0;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "logo . hamburger";
+
+        align-items: center;
+
+        .gatsby-image-wrapper {
+          display: inline-block;
+        }
+
+        .logo {
+          p {
+            display: inline-block;
+            margin: 0;
+            vertical-align: center;
+          }
+        }
+
+        .gatsby-image-wrapper {
+          width: 2rem;
+          height: 2rem;
+        }
+
+        .hamburger {
+          display: block;
+          justify-self: flex-end;
+        }
+      }
+
+      .navigation {
+        margin: 0;
+        display: none; // TODO remove
+      }
     }
   }
 }
