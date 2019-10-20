@@ -6,10 +6,15 @@ const Image = () => {
   const images = getOptimizedImage();
 
   const placeholder = images.edges.find(
-    image => image.node.relativePath === "asucis-icon.png"
+    image => image.node.relativePath === "gatsby-icon.png"
   );
 
-  return <Img fluid={placeholder.node.childImageSharp.fluid} />;
+  return (
+    <Img
+      fluid={placeholder.node.childImageSharp.fluid}
+      style={{ width: "200px" }}
+    />
+  );
 };
 
 export default Image;
