@@ -1,40 +1,85 @@
-import React from "react";
+/* eslint-disable */
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import Image from "./image";
 import HeroImage from "./HeroImage";
 
-const Header = ({ siteTitle }) => (
-  <>
-    <nav>
-      <div className="navbar-container">
-        <div className="aside-navigation">
-          <div className="logo">
-            <Link to="/">
-              <Image alt={siteTitle} />
-            </Link>
-            <p>asucis.com</p>
+class Header extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      hamburger: true,
+      width: 0,
+    };
+  }
+
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener("resize", this.updateWindowDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateWindowDimensions);
+  }
+
+  updateWindowDimensions = () => {
+    this.setState(prevState => ({
+      hamburger: window.innerWidth <= 968 ? prevState.hamburger : true,
+      width: window.innerWidth,
+    }));
+  };
+
+  handleHamburger = () => {
+    this.setState(prevState => ({
+      hamburger: !prevState.hamburger,
+    }));
+  };
+
+  render() {
+    const { hamburger, width } = this.state;
+    const { siteTitle } = this.props;
+
+    return (
+      <>
+        <nav>
+          <div className="navbar-container">
+            <div className="aside-navigation">
+              <div className="logo">
+                <Link to="/">
+                  <Image alt={siteTitle} />
+                </Link>
+                <p>asucis.com</p>
+              </div>
+              <div className="hamburger">
+                <button type="button" onClick={this.handleHamburger}>
+                  <FontAwesomeIcon icon={faBars} color="#fff" />
+                </button>
+              </div>
+            </div>
+            <div
+              className="navigation"
+              style={{ display: !hamburger || width >= 968 ? "block" : "none" }}
+            >
+              <div className="ticker">lorem ipsum dol somer text</div>
+              <div className="links">
+                <Link to="/">Home</Link>
+                <Link to="/page-2">About Us</Link>
+                <Link to="/executive-members">Our Team</Link>
+                <Link to="/event-data">Events</Link>
+                <Link to="/partnerorg">Our Partners</Link>
+                <Link to="/contact">Contact</Link>
+              </div>
+            </div>
           </div>
-          <div className="hamburger">
-            <Image alt={siteTitle} />
-          </div>
-        </div>
-        <div className="navigation">
-          <div className="ticker">lorem ipsum dol somer text</div>
-          <div className="links">
-            <Link to="/">Home</Link>
-            <Link to="/page-2">About Us</Link>
-            <Link to="/executive-members">Our Team</Link>
-            <Link to="/event-data">Events</Link>
-            <Link to="/partnerorg">Our Partners</Link>
-            <Link to="/contact">Contact</Link>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <HeroImage className="hero" />
-  </>
-);
+        </nav>
+        <HeroImage className="hero" />
+      </>
+    );
+  }
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,

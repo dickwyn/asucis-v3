@@ -110,6 +110,8 @@ nav {
         .hamburger {
           display: block;
           justify-self: flex-end;
+          padding: 1rem;
+          background-color: $primary;
         }
       }
 
