@@ -1,12 +1,13 @@
 .layout {
   display: grid;
   grid-template-areas:
+    "alert-banner"
     "header"
     "content"
     "footer";
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
-  grid-gap: 10px;
+
   min-height: 100%;
 
   main {

@@ -1,0 +1,29 @@
+.alert-banner {
+  grid-area: alert-banner;
+  background-color: #cce5ff;
+  text-align: center;
+
+  p {
+    line-height: 1.5;
+
+    & > a {
+      display: inline-block;
+
+      &:link {
+        color: $black;
+      }
+
+      &:visited {
+        color: $black;
+      }
+
+      &:hover {
+        color: $white;
+      }
+
+      &:active {
+        color: $white;
+      }
+    }
+  }
+}

@@ -13,6 +13,15 @@
 }
 
 .contact-information {
+  p {
+    line-height: 1.5;
+  }
+
+  .contact-section-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   ul {
     padding: 0;
     margin-left: 20px;
@@ -22,6 +31,13 @@
   ul > li > a {
     display: inline-block;
     line-height: 2;
+  }
+
+  // Styles for phone view
+  @media (max-width: 435px) {
+    .contact-section-container {
+      grid-template-columns: 1fr;
+    }
   }
 }
 
