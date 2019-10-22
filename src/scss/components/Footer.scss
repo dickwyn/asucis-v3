@@ -1,5 +1,194 @@
 footer {
   grid-area: footer;
-  background-color: $light-primary;
-  padding: 1.45rem 1.0875rem;
+  background-color: whitesmoke;
+
+  /** This limits the max width of the content */
+  .footer-top,
+  .footer-bottom {
+    width: 100%;
+    max-width: 1280px;
+    margin: 88px auto;
+  }
+
+  .footer-top-container {
+    padding: 0 0.5rem;
+
+    .footer-top {
+      display: grid;
+      grid-template: "section-one section-two section-three" 1fr / 2fr 1fr 1fr;
+      justify-content: center;
+
+      h1 {
+        margin: 0 0 1.5rem;
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
+
+      .section-two,
+      .section-three {
+        justify-self: center;
+      }
+
+      .section-one > .right-section > a,
+      .section-two > a,
+      .section-three > a {
+        transition: all 0.25s ease-in-out;
+        text-decoration: none;
+        border-bottom: 1px dashed $divider;
+        width: fit-content;
+        text-overflow: ellipsis;
+        line-height: 1.5;
+        font-size: 1.08rem;
+        color: $black;
+
+        &:hover {
+          color: $accent;
+          border-bottom: 2px dashed $accent;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 1.2rem;
+        }
+      }
+
+      .section-one {
+        grid-area: section-one;
+        justify-self: flex-start;
+
+        display: grid;
+        grid-template: "left-section right-section" 1fr / 10rem 1fr;
+        grid-gap: 2rem;
+
+        .left-section {
+          grid-area: left-section;
+        }
+
+        .right-section {
+          grid-area: right-section;
+
+          .name,
+          .address {
+            margin: 0 0 1rem;
+          }
+
+          .name {
+            font-size: 1.5rem;
+          }
+
+          .address {
+            line-height: 1.5;
+            font-size: 1.08rem;
+          }
+
+          .social-icon-container {
+            margin-bottom: 1.5rem;
+
+            & > .social-icon {
+              display: inline-block;
+              margin-right: 1rem;
+              font-size: 1.5rem;
+
+              a {
+                color: $black;
+
+                &:hover {
+                  color: $accent;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .section-two {
+        grid-area: section-two;
+      }
+
+      .section-three {
+        grid-area: section-three;
+      }
+
+      // Styles for tablet view
+      @media (max-width: 768px) {
+        grid-template:
+          "section-one section-one"
+          "section-two section-three" 1fr / 1fr 1fr;
+        grid-gap: 3rem;
+
+        .section-one {
+          justify-self: center;
+        }
+      }
+
+      // Styles for phone view
+      @media (max-width: 435px) {
+        .section-one {
+          grid-template: "left-section" "right-section" 1fr;
+
+          .left-section {
+            .gatsby-image-wrapper {
+              margin: 0 auto;
+              height: 5rem;
+              width: 5rem;
+            }
+          }
+
+          .right-section {
+            text-align: center;
+            a {
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom-container {
+    padding: 0 1.5rem;
+    .footer-bottom {
+      display: grid;
+      grid-template: "left-section right-section" 1fr;
+
+      p {
+        margin: 0;
+        font-size: 0.75rem;
+        line-height: 2;
+        color: $divider;
+
+        & > a {
+          color: $divider;
+
+          &:hover {
+            color: $black;
+          }
+        }
+      }
+
+      .left-section {
+        grid-area: left-section;
+      }
+
+      .right-section {
+        grid-area: right-section;
+        justify-self: flex-end;
+        & > p > a {
+          display: inline-block;
+        }
+      }
+
+      // Styles for tablet view
+      @media (max-width: 1280px) {
+        grid-template: "left-section" "right-section" 1fr;
+        justify-content: center;
+        grid-gap: 1rem;
+        text-align: center;
+
+        .left-section,
+        .right-section {
+          justify-self: center;
+        }
+      }
+    }
+  }
 }

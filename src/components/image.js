@@ -6,7 +6,7 @@ const Image = () => {
   const images = getOptimizedImage();
 
   const placeholder = images.edges.find(
-    image => image.node.relativePath === "asucis-icon.png"
+    image => image.node.relativePath === "logo.png"
   );
 
   return <Img fluid={placeholder.node.childImageSharp.fluid} />;

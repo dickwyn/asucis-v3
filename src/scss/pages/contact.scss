@@ -1,13 +1,32 @@
 .contact-container {
   display: grid;
 
-  grid-template-columns: 200px 1fr 200px;
+  grid-template-columns: 150px 1fr 150px;
   height: 100%;
 }
 
+.contact-information-container,
 .typeform {
   grid-column-start: 2;
   grid-column-end: 3;
+  margin-bottom: 2rem;
+}
+
+.contact-information {
+  ul {
+    padding: 0;
+    margin-left: 20px;
+    line-height: 2;
+  }
+
+  ul > li > a {
+    display: inline-block;
+    line-height: 2;
+  }
+}
+
+.typeform {
+  height: 680px;
 }
 
 @media (max-width: 768px) {
