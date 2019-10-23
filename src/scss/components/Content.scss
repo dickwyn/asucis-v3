@@ -1,0 +1,33 @@
+content {
+  grid-area: content;
+  display: flex;
+  grid-template-areas: 
+    "contentheader"
+    "contentbody"
+    "divider";
+  flex-direction: column;
+}
+  
+contentheader {
+  grid-area: contentheader;
+  background-color: $black;
+  font-size: large;
+  color: $white;
+  display: block;
+  padding: 1rem;
+}    
+  
+contentbody{
+  grid-area: contentbody;
+  background-color: $white;
+  font-size: medium;
+  color: $secondary-text;
+  display: block;
+  padding: 1rem;
+}
+  
+divider{
+  grid-area: divider;
+  background-color: $divider;
+}
+  

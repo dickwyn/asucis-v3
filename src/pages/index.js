@@ -1,32 +1,29 @@
 import React from "react";
-import { Link } from "gatsby";
 import Layout from "../components/layout";
 import Image from "../components/image";
 import SEO from "../components/seo";
-import getSocialMediaAccount from "../hooks/get-social-media-account";
+import Content from "../components/Content";
+import getEventData from "../hooks/get-event-data";
+import getSiteInformation from "../hooks/get-site-information";
 
 const IndexPage = () => {
-  const socialMediaAccounts = getSocialMediaAccount();
+  const events = getEventData();
+  const siteinfo = getSiteInformation();
   return (
     <Layout>
       <SEO title="Home" />
-      <h1>Hi people</h1>
-      <p>Welcome to your new Gatsby site.</p>
-      <p>Now go build something great.</p>
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+      <Content title="About CIS">{siteinfo.description}</Content>
+      <Content title="Past Events">
         <Image />
-      </div>
-      {socialMediaAccounts.map(account => (
-        <a href={account.link} target="_blank" rel="noopener noreferrer">
-          {account.name}
-        </a>
-      ))}
-
-      <Link to="/page-2/">Go to page 2</Link>
-      <Link to="/executive-members">Go to Executive Members</Link>
-      <Link to="/partnerorg/">Go to Partner Organizations</Link>
-      <Link to="/event-data">Go to Events</Link>
-      <Link to="/contact">Contact us!</Link>
+      </Content>
+      <Content title="Future Events">
+        {events.map(event => (
+          <div key={event.id}>
+            <p>{event.description}</p>
+            <p>{event.date}</p>
+          </div>
+        ))}
+      </Content>
     </Layout>
   );
 };
